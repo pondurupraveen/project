@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: black; /* Add black background to the body */
+            color: white; /* Set text color to white */
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end; /* Align links to the right */
+        }
+        i{
+          color: rgb(38, 165, 174);
+        }
+        .logo {
+          color: orange;
+          padding-left: 40px;
+          padding-top: 10px;
+          font-size: 25px;
+            flex: 1; /* Take as much space as needed */
+        }
+
+        .logo h1 {
+            margin: 0; /* Remove default margin */
+        }
+     
+        .navbar a {
+            float: right;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .con{
+          font-size: 30px;
+        }
+        @media (max-width: 600px) {
+            .navbar a {
+                float: none;
+                width: 100%;
+                text-align: left;
+            }
+        }
+
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px;
+            text-align: center;
+            background-color: #333;
+            color: white;
+            overflow: hidden; /* Clear the float inside the banner */
+        }
+
+        .left-content {
+            width: 40%; /* Adjust the width based on your design preferences */
+            text-align: left;
+        }
+
+        .right-content {
+            width: 50%; /* Adjust the width based on your design preferences */
+            text-align: left;
+        }
+
+        .right-img img {
+            width: 100%; /* Adjust the width based on your design preferences */
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Center the image */
+        }
+
+        .about-section {
+            padding: 60px;
+            overflow: hidden;
+            background-color: black; /* Add black background to the about section */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left-images img {
+            width: 200px; /* Adjust the width based on your design preferences */
+            height: auto;
+            margin-bottom: 20px; /* Add margin between the images and content */
+        }
+
+        .right-content {
+          padding: 45px;
+            flex: 1; /* Take remaining space */
+            text-align: left;
+            margin-left: 40px; /* Add margin between images and content */
+        }
+
+        .button-container button {
+            padding: 20px;
+            background-color: #333;
+            color: rgb(252, 186, 100);
+            border: none;
+            cursor: pointer;
+            border-radius: 0px 10px orange;
+        }
+
+        .button-container button:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .services-section {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: stretch;
+        }
+
+        .service-card {
+            flex: 0 0 30%; /* Adjust the width of each card based on your design preferences */
+            margin-bottom: 20px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .service-card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover img {
+            transform: scale(1.1); /* Enlarge the image on hover */
+        }
+
+        .figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            text-align: center;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover .figcaption {
+            opacity: 1;
+        }
+        .why-choose-section {
+            padding: 60px;
+            background-color: black;
+            text-align: center;
+        }
+
+        .choose-cards {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .choose-card {
+            flex: 0 0 30%;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .choose-card i {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+  <div class="logo">
+    <h1>salon</h1>
+  </div>
+ <a href="#home">  <i class="fa-solid fa-home"></i>Home</a>
+ <a href="#about">  <i class="fa-solid fa-phone"></i>About</a>
+  <a href="#services">  <i class="fa-solid fa-globe"></i>Services</a></i>
+    
+</div>
+
+<div class="banner">
+    <div class="left-content">
+      <p class="con">Discover top rated saloons near you! where every saloon is <span style="color: rgb(65, 147, 206);">Google Reviewd </span> and every service is exceptional. Your beauty your choiced!</p>
+        <div class="button-container">
+          <button>Book now</button>
+      </div>
+    </div>
+
+    <div class="right-content">
+        <div class="right-img">
+            <img src="./public/img/salon-tour-2.jpg" alt="Right Side Image">
+        </div>
+    </div>
+</div>
+
+<div class="why-choose-section">
+  <h1  style="text-align: center;color: chartreuse;">Why Choose Us?</h1>
+  <div class="choose-cards">
+      <!-- Card 1 -->
+      <div class="choose-card">
+        <i class="fa-solid fa-calendar-days"></i>
+          <h3>Seamless booking</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat recusandae excepturi, vitae nihil architecto fugit saepe aliquam ut labore? Assumenda delectus temporibus harum repellat nemo?</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="choose-card">
+        <i class="fa-solid fa-scissors"></i>
+          <h3>Curated selection</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat recusandae excepturi, vitae nihil architecto fugit saepe aliquam ut labore? Assumenda delectus temporibus harum repellat nemo?</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="choose-card">
+          <i class="fas fa-users"></i>
+          <h3>Billing</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat recusandae excepturi, vitae nihil architecto fugit saepe aliquam ut labore? Assumenda delectus temporibus harum repellat nemo?</p>
+      </div>
+  </div>
+</div>
+
+<div class="about-section">
+  <div class="left-images">
+      <img src="./public/img/fsss.png" alt="Image 1" width="200px">
+      <img src="./public/img/makka.png" alt="Image 2" width="400px">
+  </div>
+
+  <div class="right-content">
+      <h1  style="color: chartreuse;">About Us</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab laboriosam ea dolor ad voluptatum enim ut inventore reprehenderit, numquam incidunt molestias totam voluptates harum suscipit aliquam dolorum quisquam rem natus laudantium provident culpa magni porro. Illum dignissimos pariatur alias iure ex quia laborum expedita itaque dolor inventore suscipit excepturi, eveniet voluptates ut cum a eum quasi! Est iste magni perspiciatis saepe quis et, soluta atque?</p>
+      <div class="button-container">
+          <button>Learn More</button>
+      </div>
+  </div>
+</div>
+
+<div class="services">
+<h1 style="text-align: center;color: chartreuse;">Our services</h1>
+<div class="services-section">
+
+    <!-- Service 1 -->
+    <div class="service-card">
+        <img src="./public/img/beauty-treatments.jpg" alt="Service 1">
+        <div class="figcaption">beauty-treatments</div>
+    </div>
+
+    <!-- Service 2 -->
+    <div class="service-card">
+        <img src="./public/img/massge.jpg" alt="Service 2">
+        <div class="figcaption">Massage </div>
+    </div>
+
+    <!-- Service 3 -->
+    <div class="service-card">
+        <img src="./public/img/safty..jpg" alt="Service 3">
+        <div class="figcaption">Hair-color</div>
+    </div>
+
+    <!-- Service 4 -->
+    <div class="service-card">
+        <img src="./public/img/woman-facial-mask-beauty-salon-22945999.jpg" alt="Service 4">
+        <div class="figcaption">facial mask</div>
+    </div>
+
+    <!-- Service 5 -->
+    <div class="service-card">
+        <img src="./public/img/waxing.jpg" alt="Service 5">
+        <div class="figcaption">waxing</div>
+    </div>
+
+    <!-- Service 6 -->
+    <div class="service-card">
+        <img src="./public/img/aa.png" alt="Service 6">
+        <div class="figcaption">cosematology</div>
+    </div>
+</div>
+</div>
+</body>
+</html>
